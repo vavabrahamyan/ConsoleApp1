@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdleGame", "ConsoleApp1\IdleGame.csproj", "{E0382606-A413-4844-A477-8439EBF399C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleGameINForm", "IdleGameINForm\IdleGameINForm.csproj", "{3C0EC11C-ABEF-4C6C-A539-A2B906B9C9B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E0382606-A413-4844-A477-8439EBF399C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0382606-A413-4844-A477-8439EBF399C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0382606-A413-4844-A477-8439EBF399C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0EC11C-ABEF-4C6C-A539-A2B906B9C9B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0EC11C-ABEF-4C6C-A539-A2B906B9C9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0EC11C-ABEF-4C6C-A539-A2B906B9C9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0EC11C-ABEF-4C6C-A539-A2B906B9C9B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

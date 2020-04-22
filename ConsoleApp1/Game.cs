@@ -49,7 +49,6 @@ namespace IdleGame
                     case ConsoleKey.D0:
                         UsersNumber[i] = 0;
                         break;
-
                 }
             }
 
@@ -59,12 +58,9 @@ namespace IdleGame
             bool[] arr = new bool[array1.Length];
             for (int i = 0; i < array1.Length; i++)
             {
-                for (int j = 0; j < array2.Length; j++)
+                if(array1[i] == array2[i])
                 {
-                    if (array1[i] == array2[j] && i == j)
-                    {
-                        arr[i] = true;
-                    }
+                    arr[i] = true;
                 }
             }
             return arr;
