@@ -28,10 +28,6 @@ namespace IdleGameINForm
             }
 
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
         private int NumberInText(string UsersNumber)
         {
             try
@@ -60,6 +56,11 @@ namespace IdleGameINForm
                 num2 = num2 / 10;
             }
             return arr;
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = null;
         }
     }
 }
