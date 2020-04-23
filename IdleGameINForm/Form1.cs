@@ -20,14 +20,22 @@ namespace IdleGameINForm
         private void button1_Click(object sender, EventArgs e)
         {
             int[] arr = ParseToArray(NumberInText(textBox1.Text));
-            textBox1.Text = null;
             label1.Text = null;
             for (int i = 0; i < arr.Length; i++)
             {
                 label1.Text += arr[i].ToString();
             }
-
+            //textBox1.Text = null;
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.ReadOnly = false;
+            button1.Enabled = true;
+        }
+        //private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    textBox1.Text = null;
+        //}
         private int NumberInText(string UsersNumber)
         {
             try
@@ -58,9 +66,5 @@ namespace IdleGameINForm
             return arr;
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = null;
-        }
     }
 }
