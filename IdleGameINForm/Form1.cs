@@ -12,6 +12,8 @@ namespace IdleGameINForm
 {
     public partial class Form1 : Form
     {
+        private int[] CompNumber = new int[] { };
+        public static int countOfSteps = 1;
         public Form1()
         {
             InitializeComponent();
@@ -19,23 +21,28 @@ namespace IdleGameINForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int[] arr = ParseToArray(NumberInText(textBox1.Text));
-            label1.Text = null;
-            for (int i = 0; i < arr.Length; i++)
+            label4.Text = $"step{countOfSteps}/9";
+            if (textBox1.Text.Length == 4)
             {
-                label1.Text += arr[i].ToString();
+                countOfSteps++;
+                int[] arr = ParseToArray(NumberInText(textBox1.Text));
+                int count = Game.CountOfTastes(CompNumber, arr);
+                label2.Text = $"Count of tastes = > {count.ToString()}";
+                bool[] boolArray = Game.AreTastes(CompNumber, arr);
+                string boolResult = null;
+                for (int i = 0; i < boolArray.Length; i++)
+                {
+                    boolResult += boolArray[i] + "  ";
+                }
+                label3.Text = boolResult;
             }
-            //textBox1.Text = null;
+            else
+            {
+                MessageBox.Show("The number is not four-digit");
+            }
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.ReadOnly = false;
-            button1.Enabled = true;
-        }
-        //private void textBox1_MouseClick(object sender, MouseEventArgs e)
-        //{
-        //    textBox1.Text = null;
-        //}
+        // Ֆունկցիան ստանում է տող և եթե տողում նրմուծված են թվեր վերադարձնում է ամբողջ թիվ
+        // Եթե տողում թվերից բացի կան այլ նշաններ վերադարձնում է -1
         private int NumberInText(string UsersNumber)
         {
             try
@@ -47,6 +54,8 @@ namespace IdleGameINForm
                 return -1;
             }
         }
+        // Ֆունկցիան ստանում է ամբողջ թիվ, որը վերածում է 
+        // միանիշ թվերի զանգվածի համապատասխան հաջորդականությամբ
         private int[] ParseToArray(int number)
         {
             int digit = 0;
@@ -66,5 +75,10 @@ namespace IdleGameINForm
             return arr;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Comp comp = new Comp();
+            CompNumber = comp.CompNumber;       
+        }
     }
 }
