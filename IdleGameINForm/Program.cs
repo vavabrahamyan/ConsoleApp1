@@ -19,4 +19,10 @@ namespace IdleGameINForm
             Application.Run(new Form1());
         }
     }
+    private static void Swap(ref double num1,ref double num2)
+    {
+        double i = num1;
+        num1 = num2;
+        num2 = i;
+    }
 }
