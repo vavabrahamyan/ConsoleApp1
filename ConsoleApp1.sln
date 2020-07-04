@@ -8,6 +8,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleGameINForm", "IdleGameINForm\IdleGameINForm.csproj", "{3C0EC11C-ABEF-4C6C-A539-A2B906B9C9B6}"
 EndProject
 Global
+
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -28,4 +29,5 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D71627F-8F07-4057-8E35-5427E1B6C031}
 	EndGlobalSection
+	
 EndGlobal
